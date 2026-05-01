@@ -12,7 +12,7 @@ export default function Hero() {
       paddingTop: 'var(--nav-h)',
     }}>
       {/* Grid — right side only, clear of text */}
-      <div style={{
+      <div className="hero-bg-grid" style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         backgroundImage: 'linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px)',
         backgroundSize: '64px 64px',
@@ -106,6 +106,7 @@ export default function Hero() {
 
       <style>{`
         @media (max-width: 860px) {
+          .hero-bg-grid { display: none; }
           .hero-grid {
             grid-template-columns: 1fr !important;
             text-align: center;
