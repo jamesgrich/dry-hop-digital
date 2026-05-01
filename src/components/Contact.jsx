@@ -50,22 +50,26 @@ export default function Contact() {
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              {[
-                { icon: '✉️', label: 'Email', val: 'hello@dryhop.digital' },
-                { icon: '💼', label: 'LinkedIn', val: 'linkedin.com/company/dryhopdigital' },
-              ].map(item => (
-                <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: '.85rem' }}>
-                  <div style={{
-                    width: 38, height: 38, background: 'var(--amber-glow)',
-                    border: '1px solid rgba(212,168,67,0.2)', borderRadius: 8,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem',
-                  }}>{item.icon}</div>
-                  <div>
-                    <div style={{ fontSize: '.72rem', color: 'var(--sub)', letterSpacing: '.06em', textTransform: 'uppercase' }}>{item.label}</div>
-                    <div style={{ fontSize: '.88rem', fontWeight: 600 }}>{item.val}</div>
-                  </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '.85rem' }}>
+                <div style={{
+                  width: 38, height: 38, background: 'var(--amber-glow)',
+                  border: '1px solid rgba(212,168,67,0.2)', borderRadius: 8,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem',
+                }}>💼</div>
+                <div>
+                  <div style={{ fontSize: '.72rem', color: 'var(--sub)', letterSpacing: '.06em', textTransform: 'uppercase' }}>LinkedIn</div>
+                  <a
+                    href="https://www.linkedin.com/company/dryhopdigital/"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ fontSize: '.88rem', fontWeight: 600, color: 'inherit', textDecoration: 'none', transition: 'color .2s' }}
+                    onMouseEnter={e => e.target.style.color = 'var(--amber)'}
+                    onMouseLeave={e => e.target.style.color = 'inherit'}
+                  >
+                    linkedin.com/company/dryhopdigital
+                  </a>
                 </div>
-              ))}
+              </div>
             </div>
           </motion.div>
 
