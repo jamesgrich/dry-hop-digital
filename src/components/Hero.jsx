@@ -121,7 +121,7 @@ export default function Hero() {
             justify-content: center;
           }
           .hero-phone {
-            order: -1;
+            order: 1;
           }
         }
       `}</style>
