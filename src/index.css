@@ -1,19 +1,19 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #080808;
-  --surface: #0e0e0e;
-  --card: #131313;
-  --card2: #1a1a1a;
-  --border: #1c1c1c;
-  --border2: #262626;
-  --amber: #d4a843;
-  --amber-light: #e8c06a;
-  --amber-dark: #a07820;
-  --amber-glow: rgba(212,168,67,0.12);
-  --text: #ffffff;
-  --sub: #888888;
-  --muted: #444444;
+  --bg: #070a07;
+  --surface: #0c0f0c;
+  --card: #111411;
+  --card2: #171c17;
+  --border: #1c231c;
+  --border2: #252e25;
+  --amber: #8fad88;
+  --amber-light: #adc4a7;
+  --amber-dark: #5e7d58;
+  --amber-glow: rgba(143,173,136,0.12);
+  --text: #f4f8f4;
+  --sub: #7a8f7a;
+  --muted: #3a4a3a;
   --live: #22c55e;
   --low: #f59e0b;
   --sold: #ef4444;
@@ -60,7 +60,7 @@ button { font-family: 'Inter', sans-serif; cursor: pointer; }
 
 /* BUTTONS */
 .btn-primary {
-  background: var(--amber); color: #000;
+  background: var(--amber); color: #0d1a0d;
   padding: .75rem 1.8rem; font-size: .82rem; font-weight: 800;
   letter-spacing: .08em; text-transform: uppercase;
   border: none; outline: none; border-radius: 8px; display: inline-flex;

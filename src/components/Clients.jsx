@@ -6,7 +6,7 @@ const clients = [
     name: 'Beer Hatch',
     tag: 'Shopify · Untappd Integration',
     icon: '🍺',
-    color: '#d4a843',
+    color: '#8fad88',
     desc: 'Custom Shopify storefront with live Untappd API integration — pulling fresh beer listings, ratings, and brewery data directly into the shop experience.',
     tags: ['Shopify', 'Untappd API', 'Custom Theme'],
   },

@@ -24,13 +24,13 @@ export default function Hero() {
       <div style={{
         position: 'absolute', top: '10%', right: '5%',
         width: 600, height: 600, borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(212,168,67,0.1) 0%, transparent 65%)',
+        background: 'radial-gradient(circle, rgba(143,173,136,0.1) 0%, transparent 65%)',
         pointerEvents: 'none',
       }} />
       <div style={{
         position: 'absolute', bottom: '0%', left: '-5%',
         width: 400, height: 400, borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(212,168,67,0.05) 0%, transparent 65%)',
+        background: 'radial-gradient(circle, rgba(143,173,136,0.05) 0%, transparent 65%)',
         pointerEvents: 'none',
       }} />
 
@@ -80,7 +80,7 @@ export default function Hero() {
             flexWrap: 'wrap',
           }}>
             {[
-              { val: '3+', label: 'Live Projects' },
+              { val: '2', label: 'Live Projects' },
               { val: '100%', label: 'Events-Focused' },
               { val: '48hr', label: 'Avg Turnaround' },
             ].map(s => (

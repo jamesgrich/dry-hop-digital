@@ -57,7 +57,7 @@ export default function Contact() {
                 <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: '.85rem' }}>
                   <div style={{
                     width: 38, height: 38, background: 'var(--amber-glow)',
-                    border: '1px solid rgba(212,168,67,0.2)', borderRadius: 8,
+                    border: '1px solid rgba(143,173,136,0.2)', borderRadius: 8,
                     display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem',
                   }}>{item.icon}</div>
                   <div>

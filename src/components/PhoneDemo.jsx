@@ -182,7 +182,7 @@ export default function PhoneDemo() {
       <div style={{
         position: 'absolute',
         width: 360, height: 360, borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(212,168,67,0.16) 0%, transparent 65%)',
+        background: 'radial-gradient(circle, rgba(143,173,136,0.16) 0%, transparent 65%)',
         pointerEvents: 'none',
         filter: 'blur(24px)',
       }} />

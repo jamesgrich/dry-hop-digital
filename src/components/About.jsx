@@ -27,7 +27,7 @@ export default function About() {
             <div style={{
               position: 'absolute', bottom: -30, left: -30, width: 260, height: 260,
               borderRadius: '50%',
-              background: 'radial-gradient(circle, rgba(212,168,67,0.18) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(143,173,136,0.18) 0%, transparent 70%)',
               pointerEvents: 'none',
             }} />
 
