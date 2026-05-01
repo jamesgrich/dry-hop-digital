@@ -1,22 +1,26 @@
 import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
+import emailjs from '@emailjs/browser'
+
+const EMAILJS_SERVICE  = 'service_lisvqpp'
+const EMAILJS_TEMPLATE = 'template_eqx3hpi'
+const EMAILJS_KEY      = 'dWCTx7HcFw-C38VB7'
 
 export default function Contact() {
   const ref = useRef(null)
+  const formRef = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
   const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState(false)
 
   function handleSubmit(e) {
     e.preventDefault()
-    const form = e.target
-    const data = new FormData(form)
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(data).toString(),
-    })
-      .then(() => setSent(true))
-      .catch(() => setSent(true))
+    setSending(true)
+    setError(false)
+    emailjs.sendForm(EMAILJS_SERVICE, EMAILJS_TEMPLATE, formRef.current, EMAILJS_KEY)
+      .then(() => { setSent(true); setSending(false) })
+      .catch(() => { setError(true); setSending(false) })
   }
 
   const inputStyle = {
@@ -82,9 +86,7 @@ export default function Contact() {
               </div>
             ) : (
               <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
+                ref={formRef}
                 onSubmit={handleSubmit}
                 style={{
                   background: 'var(--card)', border: '1px solid var(--border)',
@@ -92,8 +94,6 @@ export default function Contact() {
                   display: 'flex', flexDirection: 'column', gap: '1rem',
                 }}
               >
-                <input type="hidden" name="form-name" value="contact" />
-
                 <div className="form-name-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                   <input name="name" placeholder="Your name" required style={inputStyle}
                     onFocus={e => e.target.style.borderColor = 'var(--amber)'}
@@ -117,8 +117,13 @@ export default function Contact() {
                   onFocus={e => e.target.style.borderColor = 'var(--amber)'}
                   onBlur={e => e.target.style.borderColor = 'var(--border)'}
                 />
-                <button type="submit" className="btn-primary" style={{ justifyContent: 'center' }}>
-                  Send Message →
+                {error && (
+                  <p style={{ fontSize: '.85rem', color: 'var(--sold)', margin: 0 }}>
+                    Something went wrong — please email <a href="mailto:hello@dryhop.digital" style={{ color: 'var(--amber)' }}>hello@dryhop.digital</a> directly.
+                  </p>
+                )}
+                <button type="submit" className="btn-primary" style={{ justifyContent: 'center' }} disabled={sending}>
+                  {sending ? 'Sending…' : 'Send Message →'}
                 </button>
               </form>
             )}
