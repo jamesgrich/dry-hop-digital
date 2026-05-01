@@ -69,7 +69,7 @@ export default function Services() {
             >
               <div style={{
                 width: 44, height: 44, background: 'var(--amber-glow)',
-                border: '1px solid rgba(143,173,136,0.2)',
+                border: '1px solid rgba(212,168,67,0.2)',
                 borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontSize: '1.3rem', marginBottom: '1rem',
               }}>

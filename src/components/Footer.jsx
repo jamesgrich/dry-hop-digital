@@ -25,7 +25,7 @@ export default function Footer() {
             onMouseEnter={e => e.target.style.color = 'var(--amber)'}
             onMouseLeave={e => e.target.style.color = 'var(--sub)'}
           >
-            jamesrichardson.dev
+            Portfolio
           </a>
           <a href="https://www.linkedin.com/company/dryhopdigital/" target="_blank" rel="noreferrer"
             style={{ fontSize: '.78rem', color: 'var(--sub)', transition: 'color .2s' }}
