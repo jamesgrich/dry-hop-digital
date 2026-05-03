@@ -3,7 +3,7 @@ import PhoneDemo from './PhoneDemo'
 
 export default function Hero() {
   return (
-    <section style={{
+    <section className="hero-section" style={{
       minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
@@ -60,7 +60,7 @@ export default function Hero() {
           }}>
             Events deserve<br />
             <span style={{ color: 'var(--amber)' }}>better digital</span><br />
-            tools
+            <span style={{ color: 'var(--amber)' }}>tools</span>
           </h1>
 
           <p style={{ color: 'var(--sub)', fontSize: '1rem', lineHeight: 1.8, maxWidth: 460, marginBottom: '2rem' }}>
@@ -106,6 +106,10 @@ export default function Hero() {
 
       <style>{`
         @media (max-width: 860px) {
+          .hero-section {
+            height: 100svh;
+            min-height: 100svh;
+          }
           .hero-bg-grid { display: none; }
           .hero-grid {
             grid-template-columns: 1fr !important;
@@ -122,7 +126,7 @@ export default function Hero() {
             justify-content: center;
           }
           .hero-phone {
-            order: 1;
+            display: none;
           }
         }
       `}</style>

@@ -93,6 +93,7 @@ export default function HowItWorks() {
             border-bottom: 1px solid var(--border);
             padding: 1.5rem 0;
           }
+          .step-item:nth-child(4) { padding-left: 0; }
           .step-item:last-child { border-bottom: none; }
           .step-item::after { display: none !important; }
         }
