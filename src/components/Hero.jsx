@@ -74,7 +74,7 @@ export default function Hero() {
             <a href="#clients" className="btn-ghost">See Our Work</a>
           </div>
 
-          <div style={{
+          <div className="hero-stats" style={{
             display: 'flex', gap: '2.5rem', marginTop: '3rem',
             paddingTop: '2rem', borderTop: '1px solid var(--border)',
             flexWrap: 'wrap',
@@ -128,6 +128,9 @@ export default function Hero() {
           }
           .hero-phone {
             display: none;
+          }
+          .hero-stats {
+            margin-top: 8rem !important;
           }
         }
       `}</style>
