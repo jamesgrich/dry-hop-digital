@@ -48,30 +48,32 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65 }}
         >
-          <div className="section-label" style={{ marginBottom: '1rem' }}>
-            Digital Solutions for Events
-          </div>
+          <div className="hero-copy-main">
+            <div className="section-label" style={{ marginBottom: '1rem' }}>
+              Digital Solutions for Events
+            </div>
 
-          <h1 style={{
-            fontFamily: "'Bebas Neue', sans-serif",
-            fontSize: 'clamp(3.2rem, 5.5vw, 5.6rem)',
-            lineHeight: .88, letterSpacing: '.02em',
-            marginBottom: '1.4rem',
-          }}>
-            Events deserve<br />
-            <span style={{ color: 'var(--amber)' }}>better digital</span><br />
-            <span style={{ color: 'var(--amber)' }}>tools</span>
-          </h1>
+            <h1 style={{
+              fontFamily: "'Bebas Neue', sans-serif",
+              fontSize: 'clamp(3.2rem, 5.5vw, 5.6rem)',
+              lineHeight: .88, letterSpacing: '.02em',
+              marginBottom: '1.4rem',
+            }}>
+              Events deserve<br />
+              <span style={{ color: 'var(--amber)' }}>better digital</span><br />
+              <span style={{ color: 'var(--amber)' }}>tools</span>
+            </h1>
 
-          <p style={{ color: 'var(--sub)', fontSize: '1rem', lineHeight: 1.8, maxWidth: 460, marginBottom: '2rem' }}>
-            Custom apps, Shopify integrations, and real-time platforms built for
-            craft beer festivals, events, and hospitality. Delivered fast, without
-            the agency price tag.
-          </p>
+            <p style={{ color: 'var(--sub)', fontSize: '1rem', lineHeight: 1.8, maxWidth: 460, marginBottom: '2rem' }}>
+              Custom apps, Shopify integrations, and real-time platforms built for
+              craft beer festivals, events, and hospitality. Delivered fast, without
+              the agency price tag.
+            </p>
 
-          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <a href="#contact" className="btn-primary">Start a Project</a>
-            <a href="#clients" className="btn-ghost">See Our Work</a>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <a href="#contact" className="btn-primary">Start a Project</a>
+              <a href="#clients" className="btn-ghost">See Our Work</a>
+            </div>
           </div>
 
           <div className="hero-stats" style={{
@@ -108,29 +110,39 @@ export default function Hero() {
         @media (max-width: 860px) {
           .hero-section {
             min-height: 100svh;
-            padding-bottom: var(--nav-h);
-            align-items: flex-start;
+            align-items: stretch;
           }
           .hero-bg-grid { display: none; }
           .hero-grid {
-            grid-template-columns: 1fr !important;
+            display: flex !important;
+            flex-direction: column;
+            padding: 0 1.25rem;
+          }
+          .hero-copy-main {
+            min-height: calc(100svh - var(--nav-h));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
           }
-          .hero-grid .section-label {
+          .hero-copy-main .section-label {
             justify-content: center;
           }
-          .hero-grid p {
+          .hero-copy-main p {
             margin-left: auto;
             margin-right: auto;
           }
-          .hero-grid > div:first-child > div:last-child {
+          .hero-copy-main > div:last-child {
             justify-content: center;
+          }
+          .hero-stats {
+            margin-top: 0 !important;
+            justify-content: center;
+            padding-bottom: 3rem;
           }
           .hero-phone {
             display: none;
-          }
-          .hero-stats {
-            margin-top: 8rem !important;
           }
         }
       `}</style>
