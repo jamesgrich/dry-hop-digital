@@ -125,6 +125,7 @@ export default function Hero() {
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding-bottom: 20vh;
           }
           .hero-copy-main .section-label {
             justify-content: center;
