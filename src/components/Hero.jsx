@@ -107,8 +107,9 @@ export default function Hero() {
       <style>{`
         @media (max-width: 860px) {
           .hero-section {
-            height: 100svh;
             min-height: 100svh;
+            padding-bottom: var(--nav-h);
+            align-items: flex-start;
           }
           .hero-bg-grid { display: none; }
           .hero-grid {
